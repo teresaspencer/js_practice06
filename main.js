@@ -93,3 +93,16 @@ function combineArrays(arr1, arr2) {
 // into an array, use arrays methods, and turn the array back into
 // a string. This is also a challenge on freeCodeCamp. Check the
 // help forums there if you get stuck!
+function isPalindrome(sentence) {
+    sentence = sentence.replace(/\s+/g, "").trim().toLowerCase();
+    let j = 0;
+    let test = true;
+    for (let i = sentence.length - 1; i >=0; i--) {
+        if (sentence[i] !== sentence[j]) {
+            test = false;
+            return test;
+        }
+        j++;
+    }
+    return test;
+}
